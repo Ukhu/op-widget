@@ -1,17 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import App from "./App";
+import { defaultPoll } from './utils/constants'
+import { IPoll } from "./components/types";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export const init = (poll: IPoll = defaultPoll) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App poll={poll}     />
+    </React.StrictMode>,
+    document.getElementById("op-widget")
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+if (process.env.NODE_ENV === 'development') {
+  init()
+}

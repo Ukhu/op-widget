@@ -1,0 +1,20 @@
+.Poll {
+  width: 20em;
+  height: 100%;
+  margin: 0 auto;
+  color: #FFFFFF;
+  box-shadow: 1px 1px 10px #E0DEDE;
+}
+
+.Poll__Title {
+  margin: 0;
+  padding: 1em;
+  background-color: #F57C01;
+}
+
+.Poll__Question {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  background-color: #FF9800;
+}

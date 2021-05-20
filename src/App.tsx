@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Poll from "./components/Poll";
+import { IPoll } from "./components/types";
+import "./App.css";
 
-function App() {
+interface IAppProps {
+  poll: IPoll;
+}
+
+function App({ poll }: IAppProps) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Poll
+        pollId={poll.pollId}
+        question={poll.question}
+        options={poll.options}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 {
   "name": "op-widget",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -19,6 +20,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:widget": "parcel build src/index.tsx --global MyApp --no-source-maps",
+    "serve:dist": "npx serve dist",
+    "serve:html": "npx serve test_pages",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }

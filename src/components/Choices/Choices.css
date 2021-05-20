@@ -1,0 +1,21 @@
+.Choices {
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+}
+
+.Choices__Option {
+  padding: 1em;
+  background-color: transparent;
+  text-align: left;
+  font-size: 1em;
+  color: #212121;
+  border: none;
+  outline-color: #757575;
+  outline-width: 5px;
+  cursor: pointer;
+}
+
+.Choices__Option:hover {
+  background-color: #EFEDED;
+}
