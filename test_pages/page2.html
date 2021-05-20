@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test Page 1</title>
+    <link href="http://localhost:5000/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="op-widget"></div>
+    <script src="http://localhost:5000/index.js"></script>
+    <script>
+      var myPoll = {
+        pollId: "poll_2",
+        question: "Which is the best day of the week?",
+        options: [
+          {id: "choice1",choice: "Friday"},
+          {id: "choice2",choice: "Sunday"},
+          {id: "choice3",choice: "Monday"}
+        ]
+      }
+      MyApp.init(myPoll)
+    </script>
+  </body>
+</html>
